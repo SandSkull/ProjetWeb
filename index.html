@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Portfolio – Sirine Rouis</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
+<link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style2.css" />
+</head>
+<body>
+
+    <header class="header">
+        <a href="#home" class="logo">Sirine <span>Rouis</span> </a>
+   
+        <i class="bx bx-menu" id="menu-icon"></i>
+    <nav class="navbar">
+
+    <a href="index.html">Accueil</a>
+
+    <!-- PROFIL -->
+    <div class="nav-item">
+        <a href="#">Profil <i class="bx bx-chevron-down"></i></a>
+        <div class="dropdown">
+            <a href="biographie.html">Biographie</a>
+            <a href="education.html">Parcours Académique</a>
+            <a href="competence.html">Compétences</a>
+        </div>
+    </div>
+
+    <!-- EXPERIENCES -->
+    <div class="nav-item">
+        <a href="#">Expériences <i class="bx bx-chevron-down"></i></a>
+        <div class="dropdown">
+            <a href="experience.html">Stages & Jobs</a>
+            <a href="events.html">Événements</a>
+            <a href="courses.html">Matières & TP</a>
+        </div>
+    </div>
+
+
+    <!-- PERSONNEL -->
+    <div class="nav-item">
+        <a href="#">Personnel <i class="bx bx-chevron-down"></i></a>
+        <div class="dropdown">
+            <a href="passions.html">Passions & Hobbies</a>
+            <a href="quiz.html">Quiz</a>
+            <a href="iit.html">Témoignage IIT</a>
+        </div>
+    </div>
+
+    <a href="contact.html">Contact</a>
+
+    <button class="gradient-btn">Contacter Moi</button>
+</nav>
+    </header>
+
+<section class="home" id="home">
+    <div class="home-content">
+        <div class="intro-text">
+            <h2 class="subtitle">Salut, je suis</h2>
+            <h1 class="title">Sirine <span class="gradient-text">Rouis</span></h1>
+            <h3 class="tagline">Développeuse Full Stack, passionnée par l'IA et ML</h3>
+        </div>
+        
+        <div class="hero-description">
+            <p class="highlight">
+                Étudiante en génie informatique à l'IIT
+            </p>    
+   <p class="project-highlight">
+    Créatrice de 
+    <a href="https://myserenity.it.com" 
+   class="project-link" 
+   target="_blank" >
+    « Serenity »
+</a> — 
+    une plateforme innovante dédiée au bien-être des étudiants en santé, 
+    intégrant des outils validés scientifiquement pour la gestion du stress.
+</p>
+        </div>
+
+        <div class="hero-cta">
+            <div class="social-icons">
+                <a href="https://github.com/SandSkull" class="social-icon" aria-label="GitHub">
+                    <i class="bx bxl-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/sirine-rouis-9bb80a294/" class="social-icon" aria-label="LinkedIn">
+                    <i class="bx bxl-linkedin-square"></i>
+                </a>
+                <a href="https://www.instagram.com/exotic.sirine/" class="social-icon" aria-label="Instagram">
+                    <i class="bx bxl-instagram-alt"></i>
+                </a>
+            </div>
+
+            <div class="btn-group">
+                <a href="#" class="btn btn-primary">Voir mes projets</a>
+                <a href="#contact" class="btn btn-outline">Me contacter</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="home-img">
+        <div class="image-container">
+            <img src="images/me.jpg" alt="Sirine Rouis - Développeuse Full Stack">
+            <div class="image-glow"></div>
+        </div>
+    </div>
+</section>
+
+<section class="about" id="about">
+    <div class="about-img">
+        <img src="images/me.jpg" alt="">
+    </div>
+
+    <div class="about-content">
+        <h2> À Propos de <span>Moi</span></h2>
+        <p>Étudiante en génie informatique à l'IIT avec une licence en Informatique de Gestion, je me spécialise dans le développement full-stack et passionée par l'IA. Je maîtrise un stack complet (Next.js, TypeScript, Prisma, MySQL) et j'ai développé « Serenity », une plateforme web de gestion du bien-être mental. Élue secrétaire IEEE IIT et certifiée Scrum, je combine rigueur technique, méthodologie agile et impact utilisateur.
+</p>
+<a href="#" class="btn">En savoir plus</a>
+    </div>
+</section>
+
+<section class="projects" id="projects">
+    <h2 class="heading">Mes Projets</h2>
+    <div class="projects-box">
+            <!-- Projet 3: Hotel Management -->
+        <div class="project-card">
+            <div class="project-badge">Académique • PHP/MySQL</div>
+            <img src="images/hotel.png" alt="Capture Hotel Management">
+            <h3>Système de Gestion Hôtelière</h3>
+            
+            <div class="project-description">
+                <p class="short-text">
+                    Système de réservation et gestion hôtelière avec tableau de bord administrateur et fonctionnalités de gestion client.
+                </p>    
+        
+            </div>
+
+            <div class="project-tech">
+                <span class="tech-tag">PHP</span>
+                <span class="tech-tag">JavaScript</span>
+                <span class="tech-tag">MySQL</span>
+                <span class="tech-tag">HTML/CSS</span>
+                <span class="tech-tag">Bootstrap</span>
+            </div>
+            
+            <div class="project-links">
+                <a href="#" class="project-link" target="_blank">
+                    <i class='bx bxl-github'></i> Code Source
+                </a>
+            </div>
+        </div>
+
+        <!-- Projet 2: RepAppBuro -->
+        <div class="project-card">
+            <div class="project-badge">Académique • Java/React</div>
+            <img src="images/repapp.png" alt="Capture RepAppBuro">
+            <h3>RepAppBuro – Gestion Atelier Réparation</h3>
+            
+            <div class="project-description">
+                <p class="short-text">
+                    Application web de gestion d'atelier de réparation avec inscription client, suivi des réparations et facturation automatisée.
+                </p>
+            </div>
+            
+            <div class="project-tech">
+                <span class="tech-tag">Java</span>
+                <span class="tech-tag">ReactJs</span>
+                <span class="tech-tag">JUnit</span>
+                <span class="tech-tag">MySQL</span>
+                <span class="tech-tag">Spring Boot</span>
+            </div>
+            
+            <div class="project-links">
+                <a href="#" class="project-link" target="_blank">
+                    <i class='bx bxl-github'></i> Code Source
+                </a>
+            </div>
+        </div>
+    <!-- Projet 1: Serenity -->
+         <div class="project-card">
+            <div class="project-badge">Full-Stack • Déployé</div>
+        
+  
+            <img src="images/serenity.png" alt="Capture d'écran Serenity">
+           
+               <a href="https://myserenity.it.com/" class="project-link" target="_blank">
+            <h3>Serenity – Plateforme de Bien-être</h3>
+            </a>
+            <div class="project-description">
+                <p class="short-text">
+                    Plateforme de bien-être prête pour la production proposant des défis de méditation, suivi du sommeil, modules de formation vidéo avec quiz, et tableaux de bord analytiques en temps réel.
+                </p>
+            </div>
+            
+            <div class="project-tech">
+                <span class="tech-tag">Next.js</span>
+                <span class="tech-tag">TypeScript</span>
+                <span class="tech-tag">Prisma</span>
+                <span class="tech-tag">MySQL</span>
+                <span class="tech-tag">Tailwind</span>
+                <span class="tech-tag">Clerk Auth</span>
+            </div>
+            
+            <div class="project-links">
+                <a href="https://myserenity.it.com/" class="project-link" target="_blank">
+                    <i class='bx bx-link-external'></i> Live Demo
+                </a>
+                <a href="#" class="project-link" target="_blank">
+                    <i class='bx bxl-github'></i> Code Source
+                </a>
+            </div>
+        </div>
+   </a>
+    
+    </div>
+</section>
+<section class="achievements" id="achievements">
+    <h2 class="heading">Mes Réalisations</h2>
+    
+    <div class="achievements-grid">
+        
+        <div class="achievement-card">
+            <div class="achievement-icon">
+                <i class='bx bx-group'></i>
+            </div>
+            <h3>Secrétaire IEEE IIT 2024-2025</h3>
+            <p>
+                Élue secrétaire exécutive du chapitre étudiant IEEE IIT. 
+                Gestion des activités, coordination des événements techniques, 
+                organisation des workshops et renforcement de la communauté étudiante en technologie.
+            </p>
+            <div style="margin-top: 1.5rem; font-size: 1.4rem; color: rgba(255, 255, 255, 0.8);">
+                <p><strong>Responsabilités :</strong></p>
+                <ul style="text-align: left; margin-top: 0.5rem; padding-left: 1.5rem;">
+                    <li>Gestion des réunions et comptes-rendus</li>
+                    <li>Organisation d'événements techniques</li>
+                    <li>Coordination des membres</li>
+                    <li>Communication interne et externe</li>
+                </ul>
+            </div>
+           
+        </div>
+        
+        <div class="achievement-card">
+            <div class="achievement-icon">
+                <i class='bx bx-line-chart'></i>
+            </div>
+            <h3>Projet de Recherche Appliquée</h3>
+            <p>
+                Développement de "Serenity", une plateforme utilisée dans une thèse doctorale 
+                en santé publique sur la gestion du stress chez les étudiants en médecine.
+            </p>
+           
+        </div>
+        
+        <div class="achievement-card">
+            <div class="achievement-icon">
+                <i class='bx bx-microphone'></i>
+            </div>
+            <h3>Conférencière Événements Tech</h3>
+            <p>
+                Présentation et animation de workshops sur l'IA, la santé digitale 
+                et le développement web lors d'événements étudiants et professionnels.
+            </p>
+            
+        </div>
+    </div>
+</section>
+
+<!-- Optionnel : Section Détails IEEE -->
+<div style="max-width: 1200px; margin: 4rem auto; padding: 0 5%;">
+    <div style="background: rgba(250, 158, 93, 0.1); border-left: 4px solid #9a3e05; padding: 2rem; border-radius: 10px;">
+        <h3 style="color: #ea580c; font-size: 2rem; margin-bottom: 1rem;">
+            <i class='bx bx-network-chart'></i> Mon Engagement IEEE
+        </h3>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-top: 1.5rem;">
+            <div>
+                <h4 style="color: #fff; font-size: 1.6rem; margin-bottom: 1rem;">Rôle de Secrétaire</h4>
+                <ul style="color: rgba(255, 255, 255, 0.8); font-size: 1.4rem; line-height: 1.6; padding-left: 1.5rem;">
+                    <li>Gestion administrative du chapitre</li>
+                    <li>Rédaction des procès-verbaux</li>
+                    <li>Coordination des comités</li>
+                    <li>Communication avec les membres</li>
+                </ul>
+            </div>
+            <div>
+                <h4 style="color: #fff; font-size: 1.6rem; margin-bottom: 1rem;">Événements Organisés</h4>
+                <ul style="color: rgba(255, 255, 255, 0.8); font-size: 1.4rem; line-height: 1.6; padding-left: 1.5rem;">
+                    <li>Workshops techniques</li>
+                    <li>Conférences avec experts</li>
+                    <li>Sessions de networking</li>
+                    <li>Compétitions de programmation</li>
+                </ul>
+            </div>
+            <div>
+                <h4 style="color: #fff; font-size: 1.6rem; margin-bottom: 1rem;">Compétences Développées</h4>
+                <ul style="color: rgba(255, 255, 255, 0.8); font-size: 1.4rem; line-height: 1.6; padding-left: 1.5rem;">
+                    <li>Leadership étudiant</li>
+                    <li>Gestion de projet</li>
+                    <li>Communication professionnelle</li>
+                    <li>Organisation d'événements</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section class="contact" id="contact">
+    <h2 class="heading">Contacter-<span>Moi</span></h2>
+
+    <div class="contact-wrapper">
+        <!-- Contact Form -->
+        <form action="#">
+            <div class="input-group">
+                <div class="input-box">
+                    <input type="text" placeholder="Nom Complet" required>
+                    <input type="email" placeholder="Email" required>
+                </div>
+                <div class="input-box">
+                    <input type="tel" placeholder="Numéro Téléphone">
+                    <input type="text" placeholder="Sujet">
+                </div>
+            </div>
+
+            <textarea rows="6" placeholder="Votre Message" required></textarea>
+
+            <input type="submit" value="Envoyer un message" class="btn">
+        </form>
+
+        <!-- GIF Image -->
+        <div class="contact-gif">
+            <img src="images/gif.gif" alt="Contact GIF">
+        </div>
+    </div>
+</section>
+
+
+
+<footer class="footer">
+  <div class="social-icons">
+    <a href="https://github.com/SandSkull" aria-label="GitHub"><i class="bx bxl-github"></i></a>
+    <a href="https://www.linkedin.com/in/sirine-rouis-9bb80a294/" aria-label="LinkedIn"><i class="bx bxl-linkedin-square"></i></a>
+    <a href="https://www.instagram.com/exotic.sirine/" aria-label="Instagram"><i class="bx bxl-instagram-alt"></i></a>
+  </div>
+  <ul class="list">
+    <li><a href="#">FAQ</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#about">À Propos de Moi</a></li>
+    <li><a href="#projects">Projets</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <p class="copyright">© Sirine Rouis | Tous droits réservés</p>
+</footer>
+  <script src="script.js"></script>
+</body>
+</html>

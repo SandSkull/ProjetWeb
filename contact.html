@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact – Sirine Rouis</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Hero Section */
+    .contact-hero {
+      width: 100%;
+      text-align: center;
+      padding: 120px 5% 80px;
+      margin-top: 80px;
+      background: linear-gradient(135deg, 
+        rgba(20, 20, 20, 0.95) 0%,
+        rgba(15, 15, 15, 0.98) 100%);
+      border-bottom: 3px solid var(--main-color);
+    }
+    
+    .contact-hero h1 {
+      font-size: 5rem;
+      margin-bottom: 1.5rem;
+      font-weight: 800;
+      letter-spacing: -1px;
+    }
+    
+    .contact-hero h1 span {
+      color: var(--main-color);
+      position: relative;
+      display: inline-block;
+    }
+    
+    .contact-hero h1 span::after {
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background: linear-gradient(90deg, var(--main-color), transparent);
+    }
+    
+    .contact-hero p {
+      font-size: 1.8rem;
+      max-width: 700px;
+      margin: 0 auto;
+      color: rgba(255, 255, 255, 0.9);
+      line-height: 1.6;
+    }
+    
+    /* Container */
+    .contact-container {
+      width: 100%;
+      padding: 6rem 5%;
+      background: linear-gradient(to bottom, 
+        rgba(10, 10, 10, 1) 0%,
+        rgba(15, 15, 15, 0.98) 100%);
+      min-height: 80vh;
+    }
+    
+    /* Layout Principal */
+    .contact-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6rem;
+      max-width: 1400px;
+      margin: 0 auto;
+      align-items: start;
+    }
+    
+    /* Colonne Informations */
+    .contact-info {
+      padding: 4rem 0;
+    }
+    
+    .info-card {
+      background: linear-gradient(145deg, 
+        rgba(30, 30, 30, 0.9) 0%,
+        rgba(25, 25, 25, 0.95) 100%);
+      border-radius: 20px;
+      padding: 4rem;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .info-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 5px;
+      height: 100%;
+      background: linear-gradient(to bottom, var(--main-color), rgba(234, 88, 12, 0.5));
+    }
+    
+    .info-card h2 {
+      font-size: 2.8rem;
+      color: #fff;
+      margin-bottom: 3rem;
+      position: relative;
+      padding-bottom: 1rem;
+    }
+    
+    .info-card h2::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 60px;
+      height: 3px;
+      background: var(--main-color);
+    }
+    
+    /* Éléments d'information */
+    .info-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 2rem;
+      margin-bottom: 3rem;
+      padding: 1.5rem;
+      border-radius: 15px;
+      transition: all 0.3s ease;
+      background: rgba(255, 255, 255, 0.03);
+    }
+    
+    .info-item:hover {
+      background: rgba(255, 255, 255, 0.05);
+      transform: translateX(10px);
+    }
+    
+    .info-icon {
+      width: 60px;
+      height: 60px;
+      background: linear-gradient(135deg, var(--main-color), rgba(234, 88, 12, 0.8));
+      border-radius: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.5rem;
+      color: white;
+      flex-shrink: 0;
+    }
+    
+    .info-content h3 {
+      font-size: 1.8rem;
+      color: #fff;
+      margin-bottom: 0.5rem;
+    }
+    
+    .info-content p, 
+    .info-content a {
+      font-size: 1.6rem;
+      color: rgba(255, 255, 255, 0.7);
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    
+    .info-content a:hover {
+      color: var(--main-color);
+    }
+    
+    /* Réseaux Sociaux */
+    .social-contact {
+      margin-top: 4rem;
+    }
+    
+    .social-contact h3 {
+      font-size: 2rem;
+      color: #fff;
+      margin-bottom: 2rem;
+    }
+    
+    .social-icons-contact {
+      display: flex;
+      gap: 1.5rem;
+    }
+    
+    .social-icon-contact {
+      width: 55px;
+      height: 55px;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.2rem;
+      color: rgba(255, 255, 255, 0.8);
+      transition: all 0.3s ease;
+      text-decoration: none;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .social-icon-contact:hover {
+      background: var(--main-color);
+      color: white;
+      transform: translateY(-5px);
+      border-color: var(--main-color);
+    }
+    
+    /* Formulaire de Contact */
+    .contact-form-section {
+      padding: 4rem 0;
+    }
+    
+    .form-card {
+      background: linear-gradient(145deg, 
+        rgba(30, 30, 30, 0.9) 0%,
+        rgba(25, 25, 25, 0.95) 100%);
+      border-radius: 20px;
+      padding: 4rem;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .form-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 5px;
+      height: 100%;
+      background: linear-gradient(to bottom, var(--main-color), rgba(234, 88, 12, 0.5));
+    }
+    
+    .form-card h2 {
+      font-size: 2.8rem;
+      color: #fff;
+      margin-bottom: 3rem;
+      position: relative;
+      padding-bottom: 1rem;
+    }
+    
+    .form-card h2::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 60px;
+      height: 3px;
+      background: var(--main-color);
+    }
+    
+    /* Styles du Formulaire */
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 2.5rem;
+    }
+    
+    .form-group {
+      position: relative;
+    }
+    
+    .form-group label {
+      display: block;
+      font-size: 1.4rem;
+      color: rgba(255, 255, 255, 0.7);
+      margin-bottom: 0.8rem;
+      font-weight: 500;
+    }
+    
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      padding: 1.6rem;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 12px;
+      font-size: 1.6rem;
+      color: #fff;
+      font-family: 'Poppins', sans-serif;
+      transition: all 0.3s ease;
+    }
+    
+    .form-group input:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: var(--main-color);
+      background: rgba(255, 255, 255, 0.07);
+      box-shadow: 0 0 0 3px rgba(234, 88, 12, 0.1);
+    }
+    
+    .form-group input::placeholder,
+    .form-group textarea::placeholder {
+      color: rgba(255, 255, 255, 0.4);
+    }
+    
+    .form-group textarea {
+      min-height: 180px;
+      resize: vertical;
+    }
+    
+    /* Bouton de Soumission */
+    .submit-btn {
+      background: linear-gradient(135deg, var(--main-color), rgba(255, 29, 21, 0.9));
+      color: white;
+      border: none;
+      padding: 1.8rem 4rem;
+      border-radius: 15px;
+      font-size: 1.7rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 1rem;
+      width: 100%;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .submit-btn::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+      transition: left 0.6s ease;
+    }
+    
+    .submit-btn:hover::before {
+      left: 100%;
+    }
+    
+    .submit-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 25px rgba(234, 88, 12, 0.3);
+    }
+    
+    .submit-btn i {
+      font-size: 2rem;
+    }
+    
+    /* Message de Confirmation */
+    .confirmation-message {
+      background: rgba(16, 185, 129, 0.1);
+      border: 1px solid rgba(16, 185, 129, 0.3);
+      border-radius: 15px;
+      padding: 2rem;
+      margin-top: 2rem;
+      display: none;
+      animation: fadeIn 0.5s ease;
+    }
+    
+    .confirmation-message.active {
+      display: block;
+    }
+    
+    .confirmation-message p {
+      color: #10b981;
+      font-size: 1.6rem;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    /* Carte de Localisation */
+    .location-card {
+      background: linear-gradient(145deg, 
+        rgba(30, 30, 30, 0.9) 0%,
+        rgba(25, 25, 25, 0.95) 100%);
+      border-radius: 20px;
+      padding: 4rem;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      margin-top: 6rem;
+      text-align: center;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    .location-card h2 {
+      font-size: 2.8rem;
+      color: #fff;
+      margin-bottom: 2rem;
+    }
+    
+    .location-info {
+      font-size: 1.6rem;
+      color: rgba(255, 255, 255, 0.8);
+      margin-bottom: 3rem;
+      line-height: 1.6;
+    }
+    
+    .map-placeholder {
+      width: 100%;
+      height: 300px;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 2px dashed rgba(255, 255, 255, 0.1);
+      margin-top: 2rem;
+    }
+    
+    .map-placeholder i {
+      font-size: 6rem;
+      color: rgba(255, 255, 255, 0.1);
+    }
+    
+    /* Responsive */
+    @media (max-width: 1200px) {
+      .contact-layout {
+        grid-template-columns: 1fr;
+        gap: 4rem;
+      }
+      
+      .contact-hero h1 {
+        font-size: 4rem;
+      }
+    }
+    
+    @media (max-width: 768px) {
+      .contact-hero {
+        padding: 100px 5% 60px;
+      }
+      
+      .contact-hero h1 {
+        font-size: 3.5rem;
+      }
+      
+      .info-card,
+      .form-card,
+      .location-card {
+        padding: 3rem;
+      }
+      
+      .info-item {
+        padding: 1.2rem;
+      }
+      
+      .social-icons-contact {
+        justify-content: center;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .contact-hero h1 {
+        font-size: 3rem;
+      }
+      
+      .contact-hero p {
+        font-size: 1.6rem;
+      }
+      
+      .info-card,
+      .form-card,
+      .location-card {
+        padding: 2.5rem;
+      }
+      
+      .info-card h2,
+      .form-card h2,
+      .location-card h2 {
+        font-size: 2.4rem;
+      }
+      
+      .info-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header class="header">
+  <a href="index.html" class="logo">Sirine <span>Rouis</span></a>
+  <i class="bx bx-menu" id="menu-icon"></i>
+  <nav class="navbar">
+    <a href="index.html">Accueil</a>
+    <div class="nav-item">
+      <a href="#">Profil <i class="bx bx-chevron-down"></i></a>
+      <div class="dropdown">
+        <a href="biographie.html">Biographie</a>
+        <a href="education.html">Parcours Académique</a>
+        <a href="competence.html">Compétences</a>
+      </div>
+    </div>
+    <div class="nav-item">
+      <a href="#">Expériences <i class="bx bx-chevron-down"></i></a>
+      <div class="dropdown">
+        <a href="experience.html">Stages & Jobs</a>
+        <a href="events.html">Événements</a>
+        <a href="courses.html">Matières & TP</a>
+      </div>
+    </div>
+    <div class="nav-item">
+      <a href="#">Personnel <i class="bx bx-chevron-down"></i></a>
+      <div class="dropdown">
+        <a href="passions.html">Passions & Hobbies</a>
+        <a href="quiz.html">Quiz</a>
+        <a href="iit.html">Témoignage IIT</a>
+      </div>
+    </div>
+    <a href="contact.html">Contact</a>
+    <button class="gradient-btn">Contacter Moi</button>
+  </nav>
+</header>
+
+<main>
+  <!-- Hero Section -->
+  <section class="contact-hero">
+    <h1>Me <span>Contacter</span></h1>
+    <p>N'hésitez pas à me contacter pour discuter de projets, opportunités ou simplement échanger</p>
+  </section>
+
+  <!-- Container Principal -->
+  <div class="contact-container">
+    
+    <!-- Layout en deux colonnes -->
+    <div class="contact-layout">
+      
+      <!-- Colonne 1: Informations de contact -->
+      <div class="contact-info">
+        <div class="info-card">
+          <h2>Informations de Contact</h2>
+          
+          <div class="info-item">
+            <div class="info-icon">
+              <i class='bx bx-envelope'></i>
+            </div>
+            <div class="info-content">
+              <h3>Email</h3>
+              <a href="mailto:sirine.rouis@example.com">sirine.rouis@example.com</a>
+            </div>
+          </div>
+          
+          <div class="info-item">
+            <div class="info-icon">
+              <i class='bx bx-phone'></i>
+            </div>
+            <div class="info-content">
+              <h3>Téléphone</h3>
+              <a href="tel:+21612345678">+216 12 345 678</a>
+            </div>
+          </div>
+          
+          <div class="info-item">
+            <div class="info-icon">
+              <i class='bx bx-map'></i>
+            </div>
+            <div class="info-content">
+              <h3>Localisation</h3>
+              <p>Sfax, Tunisie</p>
+            </div>
+          </div>
+          
+          <div class="info-item">
+            <div class="info-icon">
+              <i class='bx bx-time'></i>
+            </div>
+            <div class="info-content">
+              <h3>Disponibilité</h3>
+              <p>Lundi - Vendredi<br>9:00 - 18:00</p>
+            </div>
+          </div>
+          
+          <!-- Réseaux Sociaux -->
+          <div class="social-contact">
+            <h3>Suivez-moi</h3>
+            <div class="social-icons-contact">
+              <a href="https://github.com/SandSkull" class="social-icon-contact" aria-label="GitHub" target="_blank">
+                <i class="bx bxl-github"></i>
+              </a>
+              <a href="https://www.linkedin.com/in/sirine-rouis-9bb80a294/" class="social-icon-contact" aria-label="LinkedIn" target="_blank">
+                <i class="bx bxl-linkedin"></i>
+              </a>
+              <a href="https://www.instagram.com/exotic.sirine/" class="social-icon-contact" aria-label="Instagram" target="_blank">
+                <i class="bx bxl-instagram"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Colonne 2: Formulaire de contact -->
+      <div class="contact-form-section">
+        <div class="form-card">
+          <h2>Envoyer un Message</h2>
+          
+          <form class="contact-form" id="contactForm">
+            <div class="form-group">
+              <label for="name">Nom Complet *</label>
+              <input type="text" id="name" name="name" required placeholder="Votre nom et prénom">
+            </div>
+            
+            <div class="form-group">
+              <label for="email">Adresse Email *</label>
+              <input type="email" id="email" name="email" required placeholder="votre.email@exemple.com">
+            </div>
+            
+            <div class="form-group">
+              <label for="subject">Sujet *</label>
+              <input type="text" id="subject" name="subject" required placeholder="Sujet de votre message">
+            </div>
+            
+            <div class="form-group">
+              <label for="message">Message *</label>
+              <textarea id="message" name="message" required placeholder="Décrivez votre projet ou votre demande..."></textarea>
+            </div>
+            
+            <button type="submit" class="submit-btn">
+              <i class='bx bx-paper-plane'></i>
+              Envoyer le Message
+            </button>
+          </form>
+          
+          <!-- Message de confirmation -->
+          <div class="confirmation-message" id="confirmationMessage">
+            <p>
+              <i class='bx bx-check-circle'></i>
+              Merci ! Votre message a été envoyé avec succès. Je vous répondrai dans les plus brefs délais.
+            </p>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+    
+    <!-- Section Localisation -->
+    <div class="location-card">
+      <h2>Localisation</h2>
+      <div class="location-info">
+        <p>Basée à Sfax, Tunisie, je suis disponible pour des opportunités locales et internationales.</p>
+        <p>N'hésitez pas à me contacter pour discuter de collaborations ou de projets intéressants.</p>
+      </div>
+      
+      <!-- Placeholder pour une carte (à remplacer par Google Maps ou autre) -->
+      <div class="map-placeholder">
+        <i class='bx bx-map-alt'></i>
+      </div>
+      
+      <!-- Note pour intégrer une vraie carte -->
+      <p style="font-size: 1.4rem; color: rgba(255, 255, 255, 0.6); margin-top: 2rem;">
+        <i class='bx bx-info-circle'></i> Pour intégrer Google Maps : 
+        <a href="https://developers.google.com/maps/documentation/embed/get-started" 
+           target="_blank" 
+           style="color: var(--main-color); text-decoration: underline;">
+          Consulter la documentation
+        </a>
+      </p>
+    </div>
+    
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="social-icons">
+    <a href="https://github.com/SandSkull" aria-label="GitHub"><i class="bx bxl-github"></i></a>
+    <a href="https://www.linkedin.com/in/sirine-rouis-9bb80a294/" aria-label="LinkedIn"><i class="bx bxl-linkedin-square"></i></a>
+    <a href="https://www.instagram.com/exotic.sirine/" aria-label="Instagram"><i class="bx bxl-instagram-alt"></i></a>
+  </div>
+  <ul class="list">
+    <li><a href="#">FAQ</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#about">À Propos de Moi</a></li>
+    <li><a href="#projects">Projets</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <p class="copyright">© Sirine Rouis | Tous droits réservés</p>
+</footer>
+
+<script>
+  // Gestion du formulaire de contact
+  document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    // Simulation d'envoi (remplacer par votre backend)
+    const confirmationMessage = document.getElementById('confirmationMessage');
+    
+    // Afficher le message de confirmation
+    confirmationMessage.classList.add('active');
+    
+    // Réinitialiser le formulaire
+    this.reset();
+    
+    // Cacher le message après 5 secondes
+    setTimeout(() => {
+      confirmationMessage.classList.remove('active');
+    }, 5000);
+  });
+  
+  // Animation pour les champs du formulaire
+  const formInputs = document.querySelectorAll('.form-group input, .form-group textarea');
+  
+  formInputs.forEach(input => {
+    input.addEventListener('focus', function() {
+      this.parentElement.style.transform = 'translateY(-2px)';
+    });
+    
+    input.addEventListener('blur', function() {
+      this.parentElement.style.transform = 'translateY(0)';
+    });
+  });
+</script>
+
+</body>
+</html>

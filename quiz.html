@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Quiz – Sirine Rouis</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header">
+        <a href="index.html" class="logo">Sirine <span>Rouis</span> </a>
+   
+        <i class="bx bx-menu" id="menu-icon"></i>
+    <nav class="navbar">
+
+    <a href="index.html">Accueil</a>
+
+    <!-- PROFIL -->
+    <div class="nav-item">
+        <a href="#">Profil <i class="bx bx-chevron-down"></i></a>
+        <div class="dropdown">
+            <a href="about.html">Biographie</a>
+            <a href="education.html">Parcours Académique</a>
+            <a href="competence.html">Compétences</a>
+        </div>
+    </div>
+
+    <!-- EXPERIENCES -->
+    <div class="nav-item">
+        <a href="#">Expériences <i class="bx bx-chevron-down"></i></a>
+        <div class="dropdown">
+            <a href="experience.html">Stages & Jobs</a>
+            <a href="events.html">Événements</a>
+            <a href="courses.html">Matières & TP</a>
+        </div>
+    </div>
+
+
+    <!-- PERSONNEL -->
+    <div class="nav-item">
+        <a href="#">Personnel <i class="bx bx-chevron-down"></i></a>
+        <div class="dropdown">
+            <a href="passions.html">Passions & Hobbies</a>
+            <a href="quiz.html">Quiz</a>
+            <a href="iit.html">Témoignage IIT</a>
+        </div>
+    </div>
+
+    <a href="contact.html">Contact</a>
+
+    <button class="gradient-btn">Contacter Moi</button>
+</nav>
+
+    </header>
+
+<div class="app">
+      <h1>Quiz sur l'IA et le Machine Learning</h1>
+      <div class="Quiz">
+        <h2 id="question"></h2>
+        <div id="result-box" style="display:none;"></div>
+        <div id="answer-buttons">
+            <button class="quiz-btn">A1</button>
+            <button class="quiz-btn">A2</button>
+            <button class="quiz-btn">A3</button>
+            <button class="quiz-btn">A4</button>
+        </div>
+        <button id="next-btn">Suivant</button>
+      </div>
+</div>
+
+<footer class="footer">
+    <div class="social-icons">
+        <a href="https://github.com/SandSkull" aria-label="GitHub">
+            <i class="bx bxl-github"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/sirine-rouis-9bb80a294/" aria-label="LinkedIn">
+            <i class="bx bxl-linkedin-square"></i>
+        </a>
+        <a href="https://www.instagram.com/exotic.sirine/" aria-label="Instagram">
+            <i class="bx bxl-instagram-alt"></i>
+        </a>
+    </div>
+
+    <ul class="list">
+        <li><a href="#">FAQ</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#about">À Propos de Moi</a></li>
+        <li><a href="#projects">Projets</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+
+    <p class="copyright">
+        © Sirine Rouis | Tous droits réservés
+    </p>
+</footer>
+
+  <script src="script2.js"></script>
+</body>
+</html>
+
